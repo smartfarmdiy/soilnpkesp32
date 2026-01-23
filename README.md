@@ -29,4 +29,13 @@ The main parameters that the sensor can measure are:
 7. Potassium (K): A nutrient that helps strengthen plants and improve their disease resistance.
 This type of sensor is a multiparameter soil sensor that provides users with comprehensive information for smart agriculture simply by inserting the sensor into the soil.
 
+![clean_Smart_Agriculture_Sensor_Interfacing_Guide_Page_04](https://github.com/user-attachments/assets/9868b2b8-013f-4d52-b5db-7718361845a9)
 
+
+Connecting a 7-in-1 NPK sensor to an ESP32 board for smart agriculture applications involves the following main components and steps, as outlined in the resources:
+Main Components Required:
+1. 7-in-1 NPK Sensor: This sensor can measure various parameters including moisture, temperature, pH, conductivity (EC), and NPK (Nitrogen, Phosphorus, Potassium) in the soil.
+2. ESP32 Control Board: This uses a 30-pin ESP32 DevKit because it has multiple Serial (Hardware Serial) ports.
+3. RS485 to TTL Converter Module: Since the sensor transmits signals via RS485, a converter is needed to communicate with the ESP32.
+4. External Power Supply: A 12V power supply to power the sensor (supports 4.5V to 30V).
+5. 20x4 LCD Display (Optional): For displaying measured values.
