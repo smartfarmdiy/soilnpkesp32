@@ -61,3 +61,16 @@ Key Connection Steps:
 Operation and Testing Procedure
 Once the hardware is connected, power the sensor first (e.g., from a 12V source), then power the ESP32 board. Then, configure the settings... The results will be displayed via the Serial Monitor or LCD screen, showing all seven values: humidity, temperature, EC value, pH value, and N, P, K values ​​of the soil when the sensor is inserted into the soil.
 The system works like having a "language interpreter," where the NPK sensor speaks RS485 language, which the ESP32 board doesn't understand. The RS485 to TTL module acts as an interpreter, translating that language into Serial (TTL) so that the ESP32 can process the data and display it in a way that is easy for us to understand.
+
+
+
+The working principle of data transmission in a smart agriculture system, as shown in the data source, involves the following interconnected steps:
+1. Sensor Data Acquisition: The 7-in-1 soil sensor measures various parameters including moisture, temperature, pH, electrical conductivity (EC), and NPK nutrient levels. This data is transmitted from the sensor via a pair of signal wires (A and B) using the RS485 communication standard.
+2. Signal Conversion: Since the microcontroller cannot directly receive RS485 signals, an RS485 to TTL module is required as an intermediary. This module receives the signal from the sensor and converts it into a TTL (Serial) signal for transmission to the ESP32 board.
+3. Microcontroller Processing: The ESP32 board receives data via the Hardware Serial port (in the data source, port 2, pins 16 and 17, is used). An important observation is that... In this system, the TXD and RXD wires from the converter module to the ESP32 are connected directly (TX to TX and RX to RX), unlike typical serial connections which usually require cross-connecting.
+4. Data Display Interface: After the ESP32 processes the received data, it sends the data to a 20x4 LCD screen using the I2C communication protocol, which uses only two main signal lines:
+◦ SDA (Serial Data) connected to pin 21 of the ESP32
+◦ SCL (Serial Clock) connected to pin 22 of the ESP32
+5. Output: The seven read values ​​are displayed on the LCD screen, and the data can also be sent to a Serial Monitor on a computer for real-time soil monitoring.
+Summary of data flow: Sensor (RS485) → RS485 to TTL module → ESP32 (Serial) → LCD screen (I2C)
+Analogy: This operation is like the sensor being a "foreigner" speaking a specific language (RS485). Therefore, a converter module acts as an "interpreter" to translate that language into a language that the ESP32 (system controller) understands. Once the controller understands the data, it is summarized on the LCD screen (bulletin board) using an organized writing format (I2C) so that it is easy for anyone to read and understand.
