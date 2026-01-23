@@ -16,7 +16,8 @@ This demonstration shows how to connect a 7-in-1 soil sensor to an ESP32 board f
 
 The 7-in-1 Soil Sensor is a soil parameter measuring device that can simultaneously measure seven important physical and chemical parameters. These are detailed as follows:
 
-![Uploading clean_Smart_Agriculture_Sensor_Interfacing_Guide_Page_03.jpg…]()
+
+![clean_Smart_Agriculture_Sensor_Interfacing_Guide_Page_03](https://github.com/user-attachments/assets/a0b4bdda-7909-402a-9130-04e3acd3db1f)
 
 
 The main parameters that the sensor can measure are:
