@@ -62,7 +62,9 @@ Operation and Testing Procedure
 Once the hardware is connected, power the sensor first (e.g., from a 12V source), then power the ESP32 board. Then, configure the settings... The results will be displayed via the Serial Monitor or LCD screen, showing all seven values: humidity, temperature, EC value, pH value, and N, P, K values ​​of the soil when the sensor is inserted into the soil.
 The system works like having a "language interpreter," where the NPK sensor speaks RS485 language, which the ESP32 board doesn't understand. The RS485 to TTL module acts as an interpreter, translating that language into Serial (TTL) so that the ESP32 can process the data and display it in a way that is easy for us to understand.
 
+<img width="1487" height="990" alt="ae180769-0ec1-465e-817e-441904c68a28" src="https://github.com/user-attachments/assets/b7a628d2-dad8-49e0-a9bd-ee2f0ac49770" />
 
+Ref. Circuit Design Doc
 
 The working principle of data transmission in a smart agriculture system, as shown in the data source, involves the following interconnected steps:
 1. Sensor Data Acquisition: The 7-in-1 soil sensor measures various parameters including moisture, temperature, pH, electrical conductivity (EC), and NPK nutrient levels. This data is transmitted from the sensor via a pair of signal wires (A and B) using the RS485 communication standard.
